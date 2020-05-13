@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dome</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+ <div id="app">
+ 	<a  @click="prev" v-show="index!=0"><</a>
+ 		<img :src="imgArr[index]">
+ 		<!-- <img src="../../焦点图轮播效果(源代码)/img/2.jpg"> -->
+ 	<a  @click="next" v-show="index<imgArr.length-1">></a>
+ </div>
+ <script type="text/javascript">
+ 	var app = new Vue({
+ 		el:"#app",
+ 		data:{
+ 			imgArr:["../../焦点图轮播效果(源代码)/img/1.jpg",
+ 			"../../焦点图轮播效果(源代码)/img/2.jpg",
+ 			"../../焦点图轮播效果(源代码)/img/3.jpg",
+ 			"../../焦点图轮播效果(源代码)/img/4.jpg",
+ 			"../../焦点图轮播效果(源代码)/img/5.jpg"],
+ 			index:0
+ 		},
+ 		methods:{
+ 			prev:function(){
+ 				this.index--;
+ 			},
+ 			next:function(){
+ 				this.index++;
+ 			}
+ 		}
+ 	})
+
+ </script>
+</body>
+</html>
